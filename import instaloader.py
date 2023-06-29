@@ -5,13 +5,13 @@ from tqdm import tqdm
 L = instaloader.Instaloader()
 
 try:
-    L.load_session_from_file("kobi_simmons")
+    L.load_session_from_file(" insert account name")
 except FileNotFoundError:
 
     print("Session file not found. Please log in interactivly")
-    L.interactive_login("kobi_simmons")
+    L.interactive_login("insert account name")
 
-profile = instaloader.Profile.from_username(L.context, 'kobi_simmons')
+profile = instaloader.Profile.from_username(L.context, 'insert account name')
 
 
 followers = set(follower.username for follower in profile.get_followers())
